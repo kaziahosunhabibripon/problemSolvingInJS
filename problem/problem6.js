@@ -56,3 +56,14 @@ function normalPattern(rows) {
   return result;
 }
 console.log(normalPattern(5));
+
+function pyramidPattern(rows) {
+  let result = "";
+  for (let i = 1; i <= rows; i++) {
+    let spaces = " ".repeat(rows - i);
+    let stars = "*".repeat(2 * i - 1);
+    result += spaces + stars + spaces + "\n";
+  }
+  return result;
+}
+console.log(pyramidPattern(9));
